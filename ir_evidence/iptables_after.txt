@@ -1,0 +1,53 @@
+Chain INPUT (policy ACCEPT 3285K packets, 1248M bytes)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 DROP       all  --  *      *       203.0.113.42         0.0.0.0/0           
+2    3285K 1248M ts-input   all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+
+Chain FORWARD (policy DROP 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 ts-forward  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+2        0     0 DOCKER-USER  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+3        0     0 DOCKER-FORWARD  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+
+Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
+num   pkts bytes target     prot opt in     out     source               destination         
+
+Chain DOCKER (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 DROP       all  --  !docker0 docker0  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-BRIDGE (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 DOCKER     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-CT (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 ACCEPT     all  --  *      docker0  0.0.0.0/0            0.0.0.0/0            ctstate RELATED,ESTABLISHED
+
+Chain DOCKER-FORWARD (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 DOCKER-CT  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+2        0     0 DOCKER-INTERNAL  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+3        0     0 DOCKER-BRIDGE  all  --  *      *       0.0.0.0/0            0.0.0.0/0           
+4        0     0 ACCEPT     all  --  docker0 *       0.0.0.0/0            0.0.0.0/0           
+
+Chain DOCKER-INTERNAL (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+
+Chain DOCKER-USER (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+
+Chain ts-forward (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 MARK       all  --  tailscale0 *       0.0.0.0/0            0.0.0.0/0            MARK xset 0x40000/0xff0000
+2        0     0 ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0            mark match 0x40000/0xff0000
+3        0     0 DROP       all  --  *      tailscale0  100.64.0.0/10        0.0.0.0/0           
+4        0     0 ACCEPT     all  --  *      tailscale0  0.0.0.0/0            0.0.0.0/0           
+
+Chain ts-input (1 references)
+num   pkts bytes target     prot opt in     out     source               destination         
+1        0     0 ACCEPT     all  --  lo     *       100.115.191.92       0.0.0.0/0           
+2      251 59000 ACCEPT     all  --  tailscale0 *       0.0.0.0/0            0.0.0.0/0           
+3      340 20400 ACCEPT     udp  --  *      *       0.0.0.0/0            0.0.0.0/0            udp dpt:41641
+4        0     0 RETURN     all  --  !tailscale0 *       100.115.92.0/23      0.0.0.0/0           
+5        0     0 DROP       all  --  !tailscale0 *       100.64.0.0/10        0.0.0.0/0           

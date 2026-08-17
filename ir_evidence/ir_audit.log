@@ -1,0 +1,74 @@
+[2026-08-15 13:27:36] [INFO] === INICIO DE RESPUESTA ANTE INCIDENTES ===
+[2026-08-15 13:27:36] [INFO] Directorio de evidencia creado: /tmp/ir_evidence_20260815_132736
+[2026-08-15 13:27:36] [INFO] Permisos del directorio: 700
+[2026-08-15 13:27:36] [INFO] Operador: root | Hostname: desktop
+[2026-08-15 13:27:36] [INFO] IP sospechosa objetivo: 203.0.113.42
+[2026-08-15 13:27:36] [INFO] Capturando estado completo de procesos...
+[2026-08-15 13:27:36] [INFO] Snapshot de procesos almacenado en: /tmp/ir_evidence_20260815_132736/processes_full.txt
+[2026-08-15 13:27:36] [INFO] Total de líneas capturadas: 384
+[2026-08-15 13:27:36] [INFO] Buscando procesos sospechosos (sin TTY + CPU > 5%)...
+[2026-08-15 13:27:36] [WARN] Se detectaron 1 proceso(s) sospechoso(s).
+[2026-08-15 13:27:36] [WARN] Detalle en: /tmp/ir_evidence_20260815_132736/processes_suspicious.txt
+[2026-08-15 13:27:36] [WARN] Proceso sospechoso: rafael   2358343  5.9  1.0 1730060 168280 ?      Sl   13:26   0:04  \_ /usr/bin/gnome-text-editor --gapplication-service
+[2026-08-15 13:27:36] [INFO] Capturando conexiones de red activas...
+[2026-08-15 13:27:36] [INFO] Snapshot de red almacenado en: /tmp/ir_evidence_20260815_132736/network_full.txt
+[2026-08-15 13:27:36] [INFO] Conexiones con proceso asociado: 141
+[2026-08-15 13:27:36] [INFO] Extrayendo conexiones establecidas hacia IP externas...
+[2026-08-15 13:27:36] [WARN] Se detectaron 32 conexión(es) externa(s) establecida(s).
+[2026-08-15 13:27:36] [WARN] Detalle en: /tmp/ir_evidence_20260815_132736/network_external.txt
+[2026-08-15 13:27:37] [WARN] Conexión externa: udp   ESTAB      0      0                               192.168.3.187:36851     172.67.170.115:443   users:(("vivaldi-bin",pid=2304576,fd=18))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: udp   ESTAB      0      0                               192.168.3.187:36928      160.79.104.10:443   users:(("electron",pid=46685,fd=19))                    
+[2026-08-15 13:27:37] [WARN] Conexión externa: udp   ESTAB      0      0                               192.168.3.187:45779      160.79.104.10:443   users:(("electron",pid=46685,fd=25))                    
+[2026-08-15 13:27:37] [WARN] Conexión externa: udp   ESTAB      0      0                        192.168.3.187%wlp2s0:68           192.168.3.1:67    users:(("NetworkManager",pid=1214,fd=26))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:34112    199.165.136.101:443   users:(("tailscaled",pid=1304,fd=20))                   
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:47910      34.36.213.229:443   users:(("vivaldi-bin",pid=2304576,fd=46))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:52846        192.168.3.6:8009  users:(("vivaldi-bin",pid=2304576,fd=61))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:37188      34.149.66.163:443   users:(("electron",pid=46685,fd=28))                    
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:54870     100.49.149.170:443   users:(("vivaldi-bin",pid=2304576,fd=17))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:50058       192.168.3.10:42797 users:(("vivaldi-bin",pid=2304576,fd=63))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:36000     162.247.241.14:443   users:(("vivaldi-bin",pid=2304576,fd=66))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:36008     162.247.241.14:443   users:(("vivaldi-bin",pid=2304576,fd=75))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:36020     162.247.241.14:443   users:(("vivaldi-bin",pid=2304576,fd=77))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:36032     162.247.241.14:443   users:(("vivaldi-bin",pid=2304576,fd=80))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:50572      57.144.199.32:443   users:(("zapzap",pid=2304895,fd=209))                   
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:50574      57.144.199.32:443   users:(("zapzap",pid=2304895,fd=210))                   
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:39898       18.233.77.13:443   users:(("vivaldi-bin",pid=2304576,fd=119))              
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:59654      192.200.0.109:443   users:(("tailscaled",pid=1304,fd=27))                   
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:46870      3.209.189.228:443   users:(("vivaldi-bin",pid=2304576,fd=51))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:46906      3.209.189.228:443   users:(("vivaldi-bin",pid=2304576,fd=48))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:44658     151.101.193.91:443   users:(("gnome-software",pid=7564,fd=37))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:53706    108.177.123.188:5228  users:(("vivaldi-bin",pid=2304576,fd=19))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:57294       192.168.3.10:8009  users:(("vivaldi-bin",pid=2304576,fd=60))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:43448     100.59.141.121:443   users:(("vivaldi-bin",pid=2304576,fd=44))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:60964     151.101.193.91:443   users:(("gnome-software",pid=7564,fd=32))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:57306      34.107.204.85:443   users:(("vivaldi-bin",pid=2304576,fd=73))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:33968     172.237.61.194:443   users:(("tailscaled",pid=1304,fd=22))                   
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:50770     172.104.211.98:443   users:(("Plex Media Serv",pid=1355,fd=65))              
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:57636       185.70.42.36:443   users:(("vivaldi-bin",pid=2304576,fd=25))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:34344      172.217.112.4:443   users:(("insync",pid=7394,fd=90))                       
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:49914      31.209.137.48:61613 users:(("vivaldi-bin",pid=2304576,fd=31))               
+[2026-08-15 13:27:37] [WARN] Conexión externa: tcp   ESTAB      0      0                               192.168.3.187:60570      18.164.32.118:443   users:(("vivaldi-bin",pid=2304576,fd=69))               
+[2026-08-15 13:27:37] [INFO] Iniciando verificación de integridad de binarios críticos...
+[2026-08-15 13:27:37] [INFO] Binarios a verificar: 7
+[2026-08-15 13:27:37] [INFO] SHA-256 [/usr/bin/ls]: 48893b0fb21436b54619db80486e83ef39dfccaf1aefe83dfa00c02d6146e8c0
+[2026-08-15 13:27:37] [INFO] SHA-256 [/usr/bin/ps]: 40b2b15f65edfaadc0e3f5d3644e6699db3bdf658399831901cc05c11642ea5c
+[2026-08-15 13:27:37] [INFO] SHA-256 [/usr/bin/ss]: fd2f9f77fcbe680a9c4cda65605e0a994440a7308b4762c1ec80b5a1e978ab37
+[2026-08-15 13:27:37] [INFO] SHA-256 [/usr/bin/netstat]: 7fb39e300ef534c70ea2695fc4b48af836eefcbcde1a424aeb21f37b29d2a147
+[2026-08-15 13:27:37] [INFO] SHA-256 [/usr/bin/find]: efe4843f166525b02f328f0c456a884d6a597f32d2c78cd615b6be0b64279bcf
+[2026-08-15 13:27:37] [INFO] SHA-256 [/usr/bin/who]: 48893b0fb21436b54619db80486e83ef39dfccaf1aefe83dfa00c02d6146e8c0
+[2026-08-15 13:27:37] [INFO] SHA-256 [/usr/sbin/iptables]: 603f55a8877a2db138615f961901ef23ba77451ac0a53233bd01f1c9b216636a
+[2026-08-15 13:27:37] [INFO] Verificación completada: 7 verificado(s), 0 omitido(s).
+[2026-08-15 13:27:37] [INFO] Hashes almacenados en: /tmp/ir_evidence_20260815_132736/integrity_hashes.txt
+[2026-08-15 13:27:37] [INFO] Iniciando contención de IP sospechosa: 203.0.113.42
+[2026-08-15 13:27:37] [INFO] Capturando estado actual de iptables (pre-contención)...
+[2026-08-15 13:27:37] [INFO] Reglas pre-contención almacenadas en: /tmp/ir_evidence_20260815_132736/iptables_before.txt
+[2026-08-15 13:27:37] [WARN] La regla de bloqueo para 203.0.113.42 ya existe. No se duplica.
+[2026-08-15 13:27:37] [INFO] Verificando aplicación de la regla de bloqueo...
+[2026-08-15 13:27:37] [INFO] Verificación exitosa: la IP 203.0.113.42 está bloqueada en INPUT.
+[2026-08-15 13:27:37] [INFO] Reglas post-contención almacenadas en: /tmp/ir_evidence_20260815_132736/iptables_after.txt
+[2026-08-15 13:27:37] [INFO] Para revertir la contención ejecutar: iptables -D INPUT -s 203.0.113.42 -j DROP
+[2026-08-15 13:27:37] [INFO] Sellando evidencia criptográficamente...
+[2026-08-15 13:27:37] [INFO] Sellado completado. Archivo: /tmp/ir_evidence_20260815_132736/evidencia.sha256
+[2026-08-15 13:27:37] [INFO] Para verificar integridad ejecutar: sha256sum --check /tmp/ir_evidence_20260815_132736/evidencia.sha256
+[2026-08-15 13:27:37] [INFO] === FIN DE RESPUESTA ANTE INCIDENTES ===
+[2026-08-15 13:27:37] [INFO] Evidencia disponible en: /tmp/ir_evidence_20260815_132736

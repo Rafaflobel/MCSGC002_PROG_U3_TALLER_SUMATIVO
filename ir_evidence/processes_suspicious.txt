@@ -1,0 +1,1 @@
+rafael   2358343  5.9  1.0 1730060 168280 ?      Sl   13:26   0:04  \_ /usr/bin/gnome-text-editor --gapplication-service
